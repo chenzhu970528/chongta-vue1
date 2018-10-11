@@ -35,8 +35,8 @@
 
 <style scoped>
   .container{
-    background:rgba(255,255,255,0.7);
-    margin-top:30px ;
-    box-shadow:-5px 5px  2px 2px #aaa;
+    background:rgba(255,255,255,0.9);
+    margin-top:100px ;
+    box-shadow:-2px 2px 10px 2px #bcbcbc;
   }
 </style>
