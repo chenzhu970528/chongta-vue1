@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div >
       <h3>轮播图</h3>
     </div>
 </template>

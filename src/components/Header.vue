@@ -1,12 +1,43 @@
 <template>
-  <ul class="nav nav-pills">
-    <!--exact可以避免根路由使用始终激活的样式-->
-    <router-link tag="li" active-class="active" role="presentation" to="/" exact><a>首页</a></router-link>
-    <router-link tag="li" active-class="active"  role="presentation" to="/adoption"><a>领养中心</a></router-link>
-    <router-link tag="li" active-class="active"  role="presentation" to="/homeless"><a>流浪精灵</a></router-link>
-    <router-link tag="li" active-class="active"  role="presentation" to="/matchmaking"><a>宠物婚介</a></router-link>
-    <router-link tag="li" active-class="active"  role="presentation" to="/forum"><a>论坛</a></router-link>
-  </ul>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img class="logo" src="../assets/logo.png" alt="">
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <!--exact可以避免根路由使用始终激活的样式-->
+          <router-link tag="li" active-class="active" role="presentation" to="/" exact><a>首页</a></router-link>
+          <router-link tag="li" active-class="active"  role="presentation" to="/adoption"><a>领养中心</a></router-link>
+          <router-link tag="li" active-class="active"  role="presentation" to="/homeless"><a>流浪精灵</a></router-link>
+          <router-link tag="li" active-class="active"  role="presentation" to="/matchmaking"><a>宠物婚介</a></router-link>
+          <router-link tag="li" active-class="active"  role="presentation" to="/forum"><a>论坛</a></router-link>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">个人中心</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">退出登录</a></li>
+            </ul>
+          </li>
+          <li><a href="#">定位</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
 </template>
 
 <script>
@@ -16,5 +47,8 @@
 </script>
 
 <style scoped>
-
+  .logo{
+    width: 150px;
+    height: 70px;
+  }
 </style>
