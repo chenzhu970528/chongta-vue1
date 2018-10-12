@@ -30,7 +30,8 @@ export default {
       circle: {
         amount: 18,
         layer: 3,
-        color: [70, 130, 180],
+        // color: [70, 130, 180],
+        color: [255, 255, 255],
         alpha: 0.3
       },
       line: {
@@ -110,7 +111,8 @@ export default {
       var gradient = [];
 
       gradient[0] = bctx.createRadialGradient(wWidth*0.3, wHeight*0.1, 0, wWidth*0.3, wHeight*0.1, wWidth*0.9);
-      gradient[0].addColorStop(0, 'rgb(51,122,183)');
+      // gradient[0].addColorStop(0, 'rgb(51,122,183)');
+      gradient[0].addColorStop(0, 'rgb(255,255,255)');
       gradient[0].addColorStop(1, 'transparent');
 
       bctx.translate(wWidth, 0);
@@ -120,7 +122,8 @@ export default {
       bctx.fillRect(0, 0, wWidth, wHeight);
 
       gradient[1] = bctx.createRadialGradient(wWidth*0.1, wHeight*0.1, 0, wWidth*0.3, wHeight*0.1, wWidth);
-      gradient[1].addColorStop(0, 'rgb(6,73,144)');
+      // gradient[1].addColorStop(0, 'rgb(6,73,144)');
+      gradient[1].addColorStop(0, 'rgb(255,255,255)');
       gradient[1].addColorStop(0.8, 'transparent');
 
       bctx.translate(wWidth, 0);
@@ -130,7 +133,8 @@ export default {
       bctx.fillRect(0, 0, wWidth, wHeight);
 
       gradient[2] = bctx.createRadialGradient(wWidth*0.1, wHeight*0.5, 0, wWidth*0.1, wHeight*0.5, wWidth*0.5);
-      gradient[2].addColorStop(0, 'rgba(99,184,255,0.5)');
+      // gradient[2].addColorStop(0, 'rgba(99,184,255,0.5)');
+      gradient[2].addColorStop(0, 'rgba(255,255,255,0.5)');
       gradient[2].addColorStop(1, 'transparent');
 
       bctx.beginPath();
@@ -499,6 +503,7 @@ export default {
 </script>
 
 <style>
+  body{margin: 0;padding:0}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -522,7 +527,10 @@ export default {
   width:100%;
   height:100%;
 }
-
+  .container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 
 
 </style>

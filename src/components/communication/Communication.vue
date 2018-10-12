@@ -2,18 +2,20 @@
     <div>
      <div id="backImg"></div>
       <p>精品推荐</p>
-      <div id="">内容</div>
+      <det_a></det_a>
       <button>发帖</button>
       <publish></publish>
     </div>
 </template>
 
 <script>
-  import Publish from './Publish.vue'
+  import Publish from './Com_son_b.vue'
+  import Det_a from './Com_son_a.vue'
     export default {
         name: "Communication",
       components: {
-        'publish': Publish
+        'publish': Publish,
+        'det_a':Det_a,
       }
     }
 </script>
