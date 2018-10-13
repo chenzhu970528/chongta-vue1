@@ -33,6 +33,7 @@
 <style scoped>
   body{margin: 0;padding:0}
 .backImg{
+  border-radius: 6px;
   width:100%;
   height: 395px;
   background: url("../../assets/images/dog.jpg") no-repeat;
