@@ -3,7 +3,7 @@
      <div class="backImg"></div>
       <p id="sub">
         <p>你的位置：宠它 > 宠宠交流</p>
-        <p>精品推荐</p>
+        <div class="d1">精品推荐</div>
         <div class="d2">
           <com_a></com_a>
           <com_a></com_a>
@@ -13,7 +13,7 @@
         <button>发帖</button>
         <com_b></com_b>
       </div>
-  
+
 </template>
 
 <script>
@@ -43,7 +43,13 @@
   margin-right:45px;
 }
   .d1{
-
+    background: white;
+    width: 50px;
+    text-align: center;
+    height: 298px;
+    line-height: 298px;
+    font-size:28px;
+    font-weight: bold;
   }
   .d2{
     margin-top: 200px;

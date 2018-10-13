@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Adoption from '../components/adoption/Adoption.vue'
 import Homeless from '../components/homeless/Homeless.vue'
-import Forum from '../components/forum/Forum.vue'
+import Communication from '../components/forum/Communication.vue'
 import Matchmaking from '../components/matchmaking/Matchmaking.vue'
 import User from '../components/user/User.vue'
 Vue.use(Router)
@@ -33,8 +33,8 @@ export default new Router({
     },
     {
       path: '/forum',
-      name: 'Forum',
-      component: Forum,
+      name: 'Communication',
+      component: Communication,
     },
     {
       path: '/user',

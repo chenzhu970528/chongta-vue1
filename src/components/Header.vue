@@ -20,7 +20,7 @@
           <router-link tag="li" active-class="active"  role="presentation" to="/adoption"><a>领养中心</a></router-link>
           <router-link tag="li" active-class="active"  role="presentation" to="/homeless"><a>流浪精灵</a></router-link>
           <router-link tag="li" active-class="active"  role="presentation" to="/matchmaking"><a>宠物婚介</a></router-link>
-          <router-link tag="li" active-class="active"  role="presentation" to="/forum"><a>论坛</a></router-link>
+          <router-link tag="li" active-class="active"  role="presentation" to="/forum"><a>宠宠交流</a></router-link>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
