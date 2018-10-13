@@ -27,7 +27,7 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户 <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <router-link tag="li" active-class="active"  role="presentation" to="/user"><a>个人中心</a></router-link>
+              <router-link tag="li" active-class="active"  role="presentation" :to="'/user/'+UserId"><a>个人中心</a></router-link>
               <li role="separator" class="divider"></li>
               <li><a href="#">退出登录</a></li>
             </ul>
@@ -41,8 +41,13 @@
 </template>
 
 <script>
+  import {mapGetters} from 'vuex';
     export default {
-        name: "Header"
+        name: "Header",
+      computed:mapGetters([
+        'UserId'
+      ])
+
     }
 </script>
 

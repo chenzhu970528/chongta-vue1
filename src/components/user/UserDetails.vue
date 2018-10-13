@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <h2>个人中心</h2>
-    <div><h4>用户id：{{userId}}</h4></div>
+    <h2>用户详情</h2>
+    <div><h4>详情用户id：{{userId}}</h4></div>
   </div>
 </template>
 
 <script>
     export default {
-        name: "User",
+        name: "UserDetails",
       data(){
         return {
           userId:this.$route.params.userId
