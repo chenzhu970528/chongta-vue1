@@ -1,8 +1,8 @@
 <template>
     <div>
       <sildes-show></sildes-show>
-
-      <div class="container">
+      <div class="cont container">
+        <!--小喵-->
         <div class="main">
           <span class="stand"></span>
           <div class="cat">
@@ -39,30 +39,39 @@
             </div>
           </div>
         </div>
+        <!--小喵-->
         <h2>领养中心</h2>
+        <ado-sizer></ado-sizer>
+        <ado-list></ado-list>
       </div>
     </div>
-
 </template>
 
 <script>
+  // 头部轮播图
   import Slideshow from '../adoption/AdoptionSlideshow.vue'
+  //宠物筛选器
+  import Sizer from '../adoption/AdoptionSizer'
+  // 宠物列表
+  import List from '../adoption/AdoptionList'
     export default {
         name: "Adoption",
       components:{
-        'sildes-show':Slideshow
+        'sildes-show':Slideshow,
+        'ado-sizer': Sizer,
+        'ado-list':List
       }
     }
 </script>
 
 <style scoped>
-  .container{
+  .cont{
     position: relative;
     background:rgba(255,255,255,0.9);
     margin-top:100px;
     margin-bottom: 50px;
     box-shadow:-2px 2px 10px 2px #bcbcbc;
-    min-height: 500px;
+    min-height: 700px;
   }
 
   /*小猫*/
@@ -291,7 +300,7 @@
     height: 20px;
     width: 200px;
     border-radius: 20px;
-    background-color: #064990;
+    background-color: #80b5d0;
     z-index: 2;
   }
   .main .stand::after {
@@ -303,7 +312,7 @@
     height: 10px;
     width: 50px;
     border-radius: 20px;
-    background-color: #fdf9de;
+    background-color: #597d9d;
   }
   .main .cat {
     width: 110px;
@@ -317,7 +326,7 @@
   .main .cat .body {
     width: 110px;
     height: 50px;
-    background-color: #745260;
+    background-color: #999;
     position: absolute;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
@@ -327,7 +336,7 @@
     content: "";
     width: 70px;
     height: 35px;
-    background-color: #745260;
+    background-color: #999;
     position: absolute;
     top: calc(50% - 10px);
     left: -40px;
@@ -349,7 +358,7 @@
     bottom: -10px;
     right: 0;
     border-bottom-right-radius: 5px;
-    background: #745260;
+    background: #999;
     z-index: 0;
   }
   .tail > .tail {
@@ -370,7 +379,7 @@
     height: 0;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-bottom: 20px solid #745260;
+    border-bottom: 20px solid #999;
     transform: rotate(-30deg);
     animation: left-ear 12s both infinite;
   }
