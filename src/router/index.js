@@ -2,13 +2,14 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import Adoption from '../components/adoption/Adoption.vue'
-import homeless from '../components/homeless/homeless.vue'
-import Communication from '../components/forum/Communication.vue'
-
+import Homeless from '../components/homeless/Homeless.vue'
+import Forum from '../components/forum/Forum.vue'
+import Matchmaking from '../components/matchmaking/Matchmaking.vue'
+import User from '../components/user/User.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history', //默认时hash模式（#）
+  mode:'history', //默认时hash模式（#）
   routes: [
     {
       path: '/',
@@ -22,19 +23,24 @@ export default new Router({
     },
     {
       path: '/homeless',
-      name: 'homeless',
-      component: homeless,
-    },  {
-      path: '/forum',
-      name: 'Communication',
-      component: Communication,
+      name: 'Homeless',
+      component: Homeless,
     },
-    // {
-    //   path: '/forum', component: Communication, children: [
-    //     {path: '', component: Communication},
-    //   ]
-    // },
-    // {path: '*', redirect: '/'}    //重定向，针对任何未匹配的路由
+    {
+      path: '/matchmaking',
+      name: 'Matchmaking',
+      component: Matchmaking,
+    },
+    {
+      path: '/forum',
+      name: 'Forum',
+      component: Forum,
+    },
+    {
+      path: '/user',
+      name: 'User',
+      component: User,
+    }
 
   ]
 })
