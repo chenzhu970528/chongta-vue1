@@ -4,6 +4,8 @@ import Home from '@/components/Home'
 import Adoption from '../components/adoption/Adoption.vue'
 import Homeless from '../components/homeless/Homeless.vue'
 import Communication from '../components/forum/Communication.vue'
+import Page from '../components/forum/Page.vue'
+import Share from '../components/forum/Share.vue'
 import Matchmaking from '../components/matchmaking/Matchmaking.vue'
 import User from '../components/user/User.vue'
 Vue.use(Router)
@@ -31,10 +33,14 @@ export default new Router({
       name: 'Matchmaking',
       component: Matchmaking,
     },
-    {
-      path: '/forum',
-      name: 'Communication',
+    {path: '/forum',
       component: Communication,
+      children:[
+        {path:'/diary',component:Share},
+        {path:'/share',component:Share}
+      ]
+
+
     },
     {
       path: '/user',
