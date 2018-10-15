@@ -23,7 +23,7 @@
 
 <style scoped>
   .row{
-    margin-top: 40px;
+    margin-top: 80px;
     /*position: relative;*/
   }
   .list{
