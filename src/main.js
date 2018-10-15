@@ -5,11 +5,14 @@ import Vue from 'vue'
 import App from './App'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import { Carousel } from 'element-ui';
 import router from './router'
 import $ from 'jquery'
 import store from './router/store'
 Vue.config.productionTip = false
 
+Vue.use(ElementUI);
+Vue.use(Carousel);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -17,4 +20,5 @@ new Vue({
   store,
   components: { App },
   template: '<App/>'
-})
+});
+
