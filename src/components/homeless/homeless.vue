@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <el-breadcrumb separator="/">
-      <span>您的位置：</span>
-      <el-breadcrumb-item><a href="/">宠它</a></el-breadcrumb-item>
-      <el-breadcrumb-item><a href="">寻找</a></el-breadcrumb-item>
-      <el-breadcrumb-item><a href="homeless.vue">返回上一页</a></el-breadcrumb-item>
-    </el-breadcrumb>
+    <ol class="breadcrumb">
+      您当前位置为：
+      <li><a href="/matchmaking">流浪精灵</a></li>
+      <!--<li><a href="#">详情</a></li>-->
+      <li class="active">详情</li>
+    </ol>
 
     <div class="row">
       <div class="col-xs-8 top_1" >
@@ -16,25 +16,26 @@
           遗弃、不伤害”开始，让周围的人正确的对待身边的动物
         </p>
       </div>
-      <div class="col-xs-4">
+      <div class="col-xs-4" style="margin-top: 35px">
         <img src="../../assets/homeless/homeless.jpg" class="img-responsive" alt="Responsive image">
       </div>
     </div>
     <!--发布按钮-->
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav" style="margin-top: -40px">
       <router-link  tag="li" active-class="active" role="presentation" to="/homeless/publish" style="float: left" exact><el-row><el-button type="success" plain style="font-size: 25px">我要发布</el-button></el-row></router-link>
       <router-link  tag="li" active-class="active"  role="presentation" to="publish" style="float: right"><el-row><el-button type="success" plain style="font-size: 25px">我要领养</el-button></el-row></router-link>
     </ul>
     <br> <br> <br> <br> <br>
+
     <fenlei></fenlei>
-    <detail></detail>
+
 
   </div>
 </template>
 
 <script>
-  import detail from './homeless-detail'
   import fenlei from './fenlei'
+
   export default {
     name: "Homeless",
     methods:{
@@ -43,8 +44,7 @@
       }
     },
     components:{
-      'detail':detail,
-      'fenlei':fenlei
+      'fenlei':fenlei,
     }
   }
 
@@ -78,6 +78,9 @@
     width: 500px;
     /*background-color: aqua;*/
     position: relative;
-    left: 80px;
+    left: 100px;
+  }
+  .breadcrumb{
+    background-color: rgba(255,255,255,0.9);
   }
 </style>
