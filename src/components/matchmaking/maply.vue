@@ -143,7 +143,8 @@
           inputkind: '',
           inputName:'',
           inputAge:'',
-          fileList:[]
+          fileList:[],
+          radio: '1'
         };
       },
       methods: {
@@ -221,7 +222,7 @@
     bottom: 3px;
     left: 100px;
     border: none;
-    background-color: #4e76ff;
+    background-color: #8ba5ff;
     color: white;
   }
   form div p{

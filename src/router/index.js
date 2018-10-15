@@ -6,6 +6,7 @@ import Home from '../components/Home.vue'
 import Adoption from '../components/adoption/Adoption.vue'
 import matchmain from '../components/matchmaking/matchmain'
 import matchDel from '../components/matchmaking/matchDel.vue'
+import  mpublish from '../components/matchmaking/mpublish.vue'
 
 import AdoDetails from '../components/adoption/AdoptDetails.vue'
 import UserDetails from '../components/user/UserDetails.vue'
@@ -15,8 +16,9 @@ import publish from '../components/homeless/publish.vue'
 import Communication from '../components/forum/Communication.vue'
 import Page from '../components/forum/Page.vue'
 import Share from '../components/forum/Share.vue'
-import Matchmaking from '../components/matchmaking/Matchmaking.vue'
+// import Matchmaking from '../components/matchmaking/Matchmaking.vue'
 import User from '../components/user/User.vue'
+
 Vue.use(Router)
 
 
@@ -42,6 +44,11 @@ export default new Router({
       path:'/matchmaking/matchDel',
       name:'matchDel',
       component : matchDel,
+    },
+    {
+      path:'/matchmaking/mpublish',
+      name:'mpublish',
+      component:mpublish
     },
     {
       path: '/adoption/details/:adoId',
