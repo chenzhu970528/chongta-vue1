@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div>
       <h2>宠物列表</h2>
       <ul class="petList nav navbar-nav">
         <router-link tag="li" active-class="active"  role="presentation" to="/adoption/details/7"><a>宠物详情</a></router-link>

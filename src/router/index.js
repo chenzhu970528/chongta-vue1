@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 
 import Adoption from '../components/adoption/Adoption.vue'
 import AdoDetails from '../components/adoption/AdoptDetails.vue'
+import AdoIssue from '../components/adoption/AdoptIssue.vue'
 import UserDetails from '../components/user/UserDetails.vue'
 
 import Homeless from '../components/homeless/Homeless.vue'
@@ -20,10 +21,11 @@ export default new Router({
       name: 'Home',
       component: Home,
     },
+    //领养中心模块
     {
       path: '/adoption',
       name: 'Adoption',
-      component: Adoption,
+      component: Adoption
     },
     {
       path: '/adoption/details/:adoId',
@@ -31,10 +33,17 @@ export default new Router({
       component: AdoDetails,
     },
     {
+      path: '/adoption/issue/:userId',
+      name:'AdoIssue',
+      component: AdoIssue,
+    },
+    {
       path: '/userDetails/:userId',
       name:'UserDetails',
       component: UserDetails,
     },
+
+    //流浪精灵模块
     {
       path: '/homeless',
       name: 'Homeless',

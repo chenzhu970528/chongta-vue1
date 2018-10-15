@@ -14,6 +14,7 @@
 
 <style scoped>
 .jumbotron{
-  background: url("../../assets/adoption/timg.jpg");
+  background: url("../../assets/adoption/timg.jpg") no-repeat;
+  background-size:100% 100%;
 }
 </style>

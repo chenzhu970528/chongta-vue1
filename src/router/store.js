@@ -5,15 +5,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state:{
-    id: 11,
-    name:'小锤锤'
+    id: 45,
   },
   getters:{
     UserId(state){
       return state.id;
-    },
-    UserName(state){
-      return state.name;
     }
   }
 })
