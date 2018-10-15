@@ -19,13 +19,13 @@
 <script>
   import Com_a from './Com_a.vue'
   import Com_paging from './Com_paging.vue'
-  export default {
-    name: "Share" ,
-    components:{
-      'com_a':Com_a,
-      'com_paging': Com_paging,
+    export default {
+        name: "Diary",
+      components:{
+        'com_a':Com_a,
+        'com_paging': Com_paging,
+      }
     }
-  }
 </script>
 
 <style scoped>

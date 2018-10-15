@@ -1,4 +1,5 @@
 <template>
+  <!--分页-->
     <div>
         <ul>
           <li>
@@ -10,7 +11,7 @@
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">...</a></li>
-          <li><a href="#">尾页</a></li>
+          <li><a href="#">{{num}}</a></li>
           <li>
             <a href="#" aria-label="Next">
               <span aria-hidden="true">&raquo;</span>
@@ -18,15 +19,45 @@
           </li>
         </ul>
     </div>
+<!--<div>-->
+  <!--<div class="block">-->
+    <!--<el-pagination-->
+      <!--background-->
+      <!--@size-change="handleSizeChange"-->
+      <!--@current-change="handleCurrentChange"-->
+      <!--:current-page.sync="Page"-->
+      <!--:pager-count="5"-->
+      <!--:page-size="1"-->
+      <!--layout="prev, pager, next"-->
+      <!--:total="num">-->
+    <!--</el-pagination>-->
+  <!--</div>-->
+<!--</div>-->
 </template>
 
 <script>
     export default {
-        name: "Com_paging"
+      name: "Com_paging",
+      methods: {
+        handleSizeChange(val) {
+          console.log(`每页 ${val} 条`);
+        },
+        handleCurrentChange(val) {
+          console.log(`当前页: ${val}`);
+        }
+      },
+      data() {
+        return {
+          num:10,
+         Page: 5,
+          size:4,
+        };
+      }
     }
 </script>
 
 <style scoped>
+
   div  {
     margin-top:30px;
     margin-bottom:27px;

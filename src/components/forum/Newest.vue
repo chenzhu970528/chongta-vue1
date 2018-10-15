@@ -1,23 +1,15 @@
 <template>
-  <div class="row">
-    <div class="d1 col-sm-2">最新</div>
-    <div class="d2">
-      <com_a></com_a>
-      <com_a></com_a>
-      <com_a></com_a>
-      <com_a></com_a>
-    </div>
+  <div>
+   <com_a></com_a>
   </div>
 </template>
 
 <script>
   import Com_a from './Com_a.vue'
-  import Com_paging from './Com_paging.vue'
     export default {
         name: "Newest" ,
       components:{
         'com_a':Com_a,
-        'com_paging': Com_paging,
       }
     }
 </script>
