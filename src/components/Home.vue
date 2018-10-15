@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="home">
     <h2>首页</h2>
     <br>
     <br>
@@ -34,9 +34,8 @@
 </script>
 
 <style scoped>
-  .container{
+  .home{
     background:rgba(255,255,255,0.9);
-    margin-top:50px ;
     box-shadow:-2px 2px 10px 2px #bcbcbc;
     min-height: 500px;
   }
