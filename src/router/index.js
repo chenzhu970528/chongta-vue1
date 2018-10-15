@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
+
 import Adoption from '../components/adoption/Adoption.vue'
 import AdoDetails from '../components/adoption/AdoptDetails.vue'
 import UserDetails from '../components/user/UserDetails.vue'
 
 import Homeless from '../components/homeless/Homeless.vue'
-
 import Communication from '../components/forum/Communication.vue'
 import Notice from '../components/forum/Notice.vue'
 import Details from '../components/forum/Details.vue'

@@ -41,8 +41,23 @@
         </div>
         <!--小喵-->
         <h2>领养中心</h2>
-        <ado-sizer></ado-sizer>
-        <ado-list></ado-list>
+        <div class="row">
+          <div class="col-sm-8" >
+            <ado-sizer></ado-sizer>
+            <ado-list></ado-list>
+          </div>
+          <div class="col-sm-4">
+            <!--求抱走-->
+            <div class="issue">
+              <img src="../../assets/adoption/a051a6562121e26.png" alt="">
+            </div>
+            <!--二维码-->
+            <div class="qrCord">
+              <router-link tag="div" to="/adoption/issue/7"><a>求抱走</a></router-link>
+              <img src="../../assets/adoption/0974a659d83ad4c85bf93dd1c987cae2.png" alt="">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 </template>
@@ -65,7 +80,11 @@
 </script>
 
 <style scoped>
+  a{
+    text-decoration: none;
+  }
   .cont{
+    width: 1240px;
     position: relative;
     background:rgba(255,255,255,0.9);
     margin-top:100px;
@@ -73,6 +92,25 @@
     box-shadow:-2px 2px 10px 2px #bcbcbc;
     min-height: 700px;
   }
+
+  .issue img{
+    margin-left: 55px;
+    width: 300px;
+    position: relative;
+  }
+  .qrCord div{
+    position: absolute;
+    font-size: 38px;
+    left: 140px;
+    top:141px;
+    z-index:1
+  }
+  .qrCord img{
+    width: 400px;
+    position: relative;
+    top:-150px;
+  }
+
 
   /*小猫*/
   @keyframes tail {
@@ -289,8 +327,8 @@
     height: 400px;
     width: 400px;
     position: absolute;
-    left: 60%;
     top: -230px;
+    left: 70%;
   }
   .main .stand {
     position: absolute;
