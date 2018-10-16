@@ -1,20 +1,20 @@
 <template>
   <div class="container">
-    <h3>我要发布</h3>
+    <h3>我要寻找</h3>
     <form class="form-horizontal">
       <div class="form-group">
-        <label for="inputkind" class="col-sm-3 control-label">拾到信息：</label>
+        <label for="inputkind" class="col-sm-3 control-label">丢失信息：</label>
         <div class="col-sm-3">
           <input type="text" class="form-control" id="inputkind" placeholder="猫">
         </div>
       </div>
       <div class="form-group">
-        <label for="inputdetail" class="col-sm-3 control-label">拾到时间：</label>
+        <label for="inputdetail" class="col-sm-3 control-label">丢失时间：</label>
         <div class="col-sm-6">
           <el-date-picker
             v-model="value1"
             type="date"
-            placeholder="拾到日期">
+            placeholder="选择日期">
           </el-date-picker>
         </div>
       </div>
@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="inputTitle" class="col-sm-3 control-label">拾到地址:<br>（文字描述)</label>
+        <label for="inputTitle" class="col-sm-3 control-label">丢失地址:<br>（文字描述)</label>
         <div class="col-sm-6">
           <input type="text" class="form-control" id="inputTitle" placeholder="xx市区xx地区附近 关键标志物">
         </div>
@@ -85,9 +85,8 @@
         </div>
       </div>
       <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10" >
-          <el-button type="primary" style="font-size: 25px">我要发布</el-button>
-
+        <div class="col-sm-offset-2 col-sm-10">
+          <el-button type="primary" style="font-size: 25px">我要寻找</el-button>
         </div>
       </div>
     </form>
@@ -192,5 +191,3 @@
     margin-bottom: 5px;
   }
 </style>
-
-

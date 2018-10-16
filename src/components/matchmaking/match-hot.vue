@@ -1,7 +1,7 @@
 <template>
-    <div class="col-xs-4 hot">
-      <h3>最受欢迎小可爱</h3>
-      <hr>
+    <div class="col-xs-3 hot">
+      <p> <span>|</span> 最受欢迎小可爱</p>
+      <!--<hr>-->
       <hot-list></hot-list>
     </div>
 </template>
@@ -20,13 +20,27 @@
   .hot{
     /*width: 300px;*/
     height: 500px;
-    background-color: #ff8670;
-    text-align: center;
-    position: absolute;
-    right: 10px;
-    top: 10px;
+    /*text-align: center;*/
+    position: relative;
+    right: -30px;
+    /*top: 10px;*/
+    /*margin-right: 50px;*/
+    border: 2px dashed palevioletred;
   }
-  div h3{
-    padding-top: 7px;
+  hr{
+    border: 1px solid palevioletred;
+  }
+  .hot p{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    /*background-color: orangered;*/
+    position: relative;
+    top: 8px;
+    color: #c56787;
+  }
+  span span{
+    font-size: 40px;
   }
 </style>

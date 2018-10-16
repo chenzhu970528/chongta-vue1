@@ -4,7 +4,6 @@
     <div class="container">
       <current-way></current-way>
       <h2>标题</h2>
-
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1 cent">
           <sowing-map></sowing-map>
@@ -20,13 +19,7 @@
       <br>
       <br>
       <br>
-
-
-
     </div>
-    <!--<div>-->
-      <!--<foot></foot>-->
-    <!--</div>-->
   </div>
 
 </template>
