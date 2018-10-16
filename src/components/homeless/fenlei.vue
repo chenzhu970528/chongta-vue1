@@ -21,7 +21,7 @@
       </div>
     </div>
     <hot></hot>
-    <reward></reward>
+    <!--<reward></reward>-->
   </div>
 </template>
 
@@ -31,7 +31,7 @@
   import looking from './looking'
   import looked from './looked'
   import hot from './hot'
-  import reward from './reward'
+  // import reward from './reward'
 
     export default {
       components: {
@@ -40,7 +40,7 @@
         'looking': looking,
         'looked':looked,
         'hot':hot,
-        'reward':reward
+        // 'reward':reward
       },
       data() {
         return {

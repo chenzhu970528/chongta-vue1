@@ -12,14 +12,17 @@
     <a href="#" class="list-group-item">丢失小猫一只</a>
     <a href="#" class="list-group-item">拾到狗狗一只</a>
     <a href="#" class="list-group-item">拾到小猫一只</a>
-
+    <div style="width: 1200px;margin-top: 30px"><reward></reward></div>
   </div>
 
 </template>
 
 <script>
+  import reward from './reward'
   export default {
-
+    components: {
+      'reward':reward
+    },
   }
 </script>
 
