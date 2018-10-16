@@ -1,4 +1,6 @@
 <template>
+  <div>
+  <cat></cat>
   <div class="container">
     <ol class="breadcrumb">
       您当前位置为：
@@ -26,16 +28,24 @@
       <router-link  tag="li" active-class="active"  role="presentation" to="publish" style="float: right"><el-row><el-button type="success" plain style="font-size: 25px">我要领养</el-button></el-row></router-link>
     </ul>
     <br> <br> <br> <br> <br>
-
     <fenlei></fenlei>
+    <!--<div class="row">-->
+      <!--<div class="col-xs-8 top_1" >-->
+
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-xs-4 li_right" ><hot></hot></div>-->
 
 
+
+
+  </div>
   </div>
 </template>
 
 <script>
   import fenlei from './fenlei'
-
+  import cat from './cat'
   export default {
     name: "Homeless",
     methods:{
@@ -45,6 +55,8 @@
     },
     components:{
       'fenlei':fenlei,
+      // 'hot':hot,
+      'cat':cat
     }
   }
 
@@ -56,6 +68,7 @@
     background:rgba(255,255,255,0.9);
     margin-top:50px ;
     box-shadow:-2px 2px 10px 2px #bcbcbc;
+    width: 1240px;
   }
   img{
     height: 300px;
@@ -72,6 +85,12 @@
   }
   .top_1 p{
     height: 112px;
+  }
+  .li_right{
+    position: relative;
+    margin-left: 280px;
+    margin-top: -20px;
+    width: 350px;
   }
 
   ul{
