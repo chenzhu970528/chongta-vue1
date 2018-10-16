@@ -14,6 +14,8 @@ import UserDetails from '../components/user/UserDetails.vue'
 
 import Homeless from '../components/homeless/Homeless.vue'
 import publish from '../components/homeless/publish.vue'
+import detail from '../components/homeless/detail.vue'
+import wantadopt from '../components/homeless/wantadopt'
 import Communication from '../components/forum/Communication.vue'
 import Page from '../components/forum/Page.vue'
 import Share from '../components/forum/Share.vue'
@@ -82,6 +84,16 @@ export default new Router({
       path: '/homeless/publish',
       name: 'publish',
       component: publish,
+    },
+    {
+      path: '/homeless/wantadopt',
+      name: 'wantadopt',
+      component:wantadopt,
+    },
+    {
+      path: '/homeless/detail',
+      name: 'detail',
+      component: detail,
     },
     {
       path: '/forum',

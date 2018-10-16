@@ -1,5 +1,5 @@
 <template>
-  <div class="list-group col-xs-4">
+  <div class="list-group col-xs-4" >
   <div class="block">
     <span class="demonstration">有报酬的启示</span>
     <el-carousel height="150px">

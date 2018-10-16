@@ -8,6 +8,11 @@
     <a href="#" class="list-group-item">丢失小猫一只</a>
     <a href="#" class="list-group-item">拾到狗狗一只</a>
     <a href="#" class="list-group-item">拾到小猫一只</a>
+    <a href="#" class="list-group-item">丢失狗狗一只 </a>
+    <a href="#" class="list-group-item">丢失小猫一只</a>
+    <a href="#" class="list-group-item">拾到狗狗一只</a>
+    <a href="#" class="list-group-item">拾到小猫一只</a>
+
   </div>
 
 </template>
