@@ -1,13 +1,13 @@
 <template>
   <div class="row" style="height: 20px">
-    <div class="col-xs-5">
+    <div class="cont col-xs-7">
       <el-tabs v-model="activeName2" type="card" @tab-click="handleClick">
         <el-tab-pane label="全部" name="first"><all></all></el-tab-pane>
         <el-tab-pane label="寻找中" name="second"><looking></looking></el-tab-pane>
         <el-tab-pane label="已找到" name="third"><looked></looked></el-tab-pane>
       </el-tabs>
     </div>
-    <div class="col-xs-4">
+    <div class="gonggao">
     <span>公告：
       <required></required>
       <!--<a href="">寻宠发布必读</a>-->
@@ -47,5 +47,12 @@
 </script>
 
 <style scoped>
-
+  .cont{
+    position: relative;
+  }
+  .gonggao{
+    position: absolute;
+    left: 463px;
+    top:-25px
+  }
 </style>
