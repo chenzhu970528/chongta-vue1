@@ -19,7 +19,7 @@
         </p>
       </div>
       <div class="col-xs-4" style="margin-top: 35px">
-        <img src="../../assets/homeless/homeless.jpg" class="img-responsive" alt="Responsive image">
+        <img src="../../assets/homeless/2..jpg" class="img-responsive" alt="Responsive image">
       </div>
     </div>
     <!--发布按钮-->
