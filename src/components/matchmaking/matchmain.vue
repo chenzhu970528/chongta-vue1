@@ -3,11 +3,8 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-7">选择</div>
-        <match-hot></match-hot>
       </div>
-
-
-      <router-link><button>我要发布</button></router-link>
+      <router-link to="/matchmaking/mpublish"><button>我要发布</button></router-link>
       <match-list></match-list>
       <change-page></change-page>
       <br>
@@ -21,14 +18,14 @@
   import Header from '../Header.vue'
   import  matchlist from './matchlist.vue'
   import changepage from './changepage.vue'
-  import  matchhot from './match-hot.vue'
+  // import  matchhot from './match-hot.vue'
     export default {
         name: "matchmain",
       components:{
         'app-header':Header,
         'match-list':matchlist,
         'change-page':changepage,
-        'match-hot':matchhot
+        // 'match-hot':matchhot
       }
     }
 </script>
@@ -45,5 +42,16 @@
     height: 500px;
     background-color: #cfc3e2;
     margin-top: 10px;
+  }
+  button{
+    border: none;
+    background-color: #7197ff;
+    color: whitesmoke;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
   }
 </style>

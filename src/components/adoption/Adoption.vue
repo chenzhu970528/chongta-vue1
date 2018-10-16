@@ -40,11 +40,18 @@
           </div>
         </div>
         <!--小喵-->
-        <h2>领养中心</h2>
+        <div class="title">
+          <img src="../../assets/adoption/take.png" width="50" alt="">
+          <span class="text-info">萌宠分类</span>
+        </div>
         <div class="row">
           <div class="col-sm-8" >
             <ado-sizer></ado-sizer>
-            <ado-list></ado-list>
+            <div class="title">
+              <img src="../../assets/adoption/iconHome.png" width="50" alt="">
+              <span class="text-info">领养信息</span>
+            </div>
+              <ado-list></ado-list>
           </div>
           <div class="col-sm-4">
             <!--求抱走-->
@@ -110,7 +117,18 @@
     position: relative;
     top:-150px;
   }
-
+  .title{
+    margin-top: 20px;
+    height: 50px;
+    position: relative;
+  }
+  .title span{
+    font-size: 28px;
+    font-weight: 700;
+    position: absolute;
+    left: 65px;
+    top: 12px;
+  }
 
   /*小猫*/
   @keyframes tail {
