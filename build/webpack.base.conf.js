@@ -87,7 +87,7 @@ module.exports = {
         options:{
           name:'fonts/[name],[ext]',
         },
-      }
+      },
     ]
   },
   node: {

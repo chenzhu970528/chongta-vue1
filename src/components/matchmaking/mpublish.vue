@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="cont container">
     <current-way></current-way>
     <h3>发布婚介</h3>
     <form class="form-horizontal">
@@ -7,6 +7,12 @@
         <label for="inputkind" class="col-sm-3 control-label">品种：</label>
         <div class="col-sm-3">
           <input type="text" class="form-control" id="inputkind" placeholder="猫">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputName" class="col-sm-3 control-label">宠物昵称：</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="inputName" placeholder="嘟嘟">
         </div>
       </div>
       <div class="form-group">
@@ -34,6 +40,22 @@
         </div>
       </div>
       <div class="form-group">
+        <div class="form-group">
+          <label for="inputpic" class="col-sm-3 control-label">宠物照片：</label>
+          <div class="col-sm-6">
+            <el-upload
+              id="inputpic"
+              class="upload-demo"
+              action="https://jsonplaceholder.typicode.com/posts/"
+              :on-preview="handlePreview"
+              :on-remove="handleRemove"
+              :file-list="fileListPic"
+              list-type="picture">
+              <!--<el-button size="small" type="primary">点击上传</el-button>-->
+              <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+            </el-upload>
+          </div>
+        </div>
         <label for="inputTitle" class="col-sm-3 control-label">标题：</label>
         <div class="col-sm-6">
           <input type="text" class="form-control" id="inputTitle" placeholder="请输入标题">
@@ -79,7 +101,7 @@
             action="https://jsonplaceholder.typicode.com/posts/"
             :on-preview="handlePreview"
             :on-remove="handleRemove"
-            :file-list="fileList2"
+            :file-list="fileListRep"
             list-type="picture">
             <!--<el-button size="small" type="primary">点击上传</el-button>-->
             <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
@@ -87,17 +109,8 @@
         </div>
       </div>
       <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> Remember me
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default">Sign in</button>
+        <div class="col-sm-offset-5 col-sm-7">
+          <button type="submit" class="btn btn-default">提交</button>
         </div>
       </div>
     </form>
@@ -154,7 +167,14 @@
             value: 'label',
             children: 'cities'
           },
-          fileList2: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}]
+          fileListPic: [
+            // {name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'},
+            {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}
+          ],
+          fileListRep: [
+            {name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'},
+            // {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}
+            ]
         };
       },
 
@@ -184,12 +204,13 @@
 </script>
 
 <style scoped>
-  .container{
+  .cont{
     background:rgba(255,255,255,0.9);
     margin-top:100px ;
     box-shadow:-2px 2px 10px 2px #bcbcbc;
     position: relative;
   }
+
   form{
     margin-top: 50px;
   }

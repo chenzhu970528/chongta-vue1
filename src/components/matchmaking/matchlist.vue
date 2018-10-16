@@ -4,7 +4,7 @@
       <div class="col-xs-8 list">
         <router-link to="/matchmaking/matchDel">
           <!--<img src="../../assets/mao1.jpg" class="img-responsive" alt="Responsive image">-->
-          <img src="../../assets/mao1.jpg" alt="..." class="img-rounded col-xs-3">
+          <img src="../../assets/match/mao1.jpg" alt="..." class="img-rounded col-xs-3">
         </router-link>
         <div class="col-xs-8 msg">
           <div>宠物基本信息</div>

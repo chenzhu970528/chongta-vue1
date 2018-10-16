@@ -1,6 +1,6 @@
 <!--婚介中心-->
 <template>
-    <div class="container">
+    <div class="cont container">
       <div class="row">
         <div class="col-xs-7">选择</div>
       </div>
@@ -31,7 +31,8 @@
 </script>
 
 <style scoped>
-  .container{
+  .cont{
+    width: 1240px;
     background:rgba(255,255,255,0.9);
     margin-top:100px ;
     box-shadow:-2px 2px 10px 2px #bcbcbc;
