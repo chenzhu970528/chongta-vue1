@@ -15,7 +15,7 @@
         <span>公告：
           <required></required>|意见发聩 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <el-badge :value="12" class="item">
-          <el-button size="small" style="margin-top: -15px">全部消息</el-button>
+          <el-button size="small" style="margin-top: -15px;margin-left: 75px">全部消息</el-button>
       </el-badge>
         </span>
       </div>
