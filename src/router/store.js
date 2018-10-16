@@ -16,9 +16,10 @@ function isLogin() {
 export default new Vuex.Store({
   state:{
     userName:'小锤锤',
-    userId: isLogin().userId,
+    // userId: isLogin().userId,
     // isLogin: isLogin().isLogin,
-    isLogin:true
+    isLogin:true,
+    userId:15
 
   },
   getters:{
