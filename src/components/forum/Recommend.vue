@@ -1,23 +1,15 @@
 <template>
-  <!--<div class="row">-->
-  <!--<div class="d1 col-sm-1">精品推荐</div>-->
-  <!--<button class="aa col-sm-1"><<</button>-->
-  <!--<div class="col-sm-9">-->
-  <!--<router-link tag="span" active-class="active"  role="presentation" to="/forum/recommend/1"><com_a class="d"></com_a></router-link>-->
-  <!--<router-link tag="span" active-class="active"  role="presentation" to="/forum/recommend/2"><com_a class="d"></com_a></router-link>-->
-  <!--<router-link tag="span" active-class="active"  role="presentation" to="/forum/recommend/3"><com_a class="d"></com_a></router-link>-->
-  <!--</div>-->
-  <!--<button class="bb col-sm-1">>></button>-->
-  <!--<com_paging class="col-sm-7 col-sm-offset-3">翻页</com_paging>-->
-  <!--</div>-->
-
   <div>
     <ul>
-      <li>
-        <img src="../../assets/images/a.jpg" alt="">
-        <p ><span class="left" >荐 ❤100</span><a class="title">标题</a></p>
+      <li v-for="val in values">
+        <img :src=val.img>
+        <p ><span class="left" >荐</span><a class="title">{{val.title}}</a></p>
       </li>
     </ul>
+    <ol class="flex-control-nav flex-control-paging">
+      <li><a class="flex-active">1</a></li>
+      <li><a class="">2</a></li>
+      <li><a class="">3</a></li></ol>
   </div>
 </template>
 
@@ -29,7 +21,12 @@
     name: "Recommend",
     data() {
       return {
-        num: {"小可爱": 100, "卡哇伊": 201, "嘻嘻嘻": 301}
+        values: [
+          {img: require("../../assets/images/a.jpg"),title: '标题'},
+          {img: require("../../assets/images/a.jpg"),title: '标题'},
+          {img: require("../../assets/images/a.jpg"),title: '标题'},
+
+        ]
       }
     },
 
@@ -47,28 +44,22 @@
 </script>
 
 <style scoped>
-  #d{
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .row {
-    margin-top: 80px;
-    margin-bottom: 60px;
-  }
 ul{
-  margin-left:-10px;
+  margin-left:-15px;
 }
-  li {
+  ul>li {
+    display: inline-block;
     color:white;
     position:relative;
     list-style: none;
     width: 380px;
-    margin-bottom:70px ;
+    margin-bottom:40px ;
+    margin-right:25px ;
   }
 
   img {
     width: 380px;
-    height: 255px;
+    height: 285px;
   }
   p{
     background: #000000;
@@ -94,36 +85,25 @@ ul{
     text-decoration: none;
   }
   .title:hover{
-    color:red;
+    color: #68abbd;
   }
-
-  /*.aa, .bb {*/
-    /*width: 80px;*/
-    /*height: 200px;*/
-    /*background: white;*/
-    /*margin-top: 80px;*/
-  /*}*/
-
-  /*.aa {*/
-    /*margin-left: 25px;*/
-    /*margin-right: 30px;*/
-  /*}*/
-
-  /*.bb {*/
-    /*margin-left: -50px;*/
-  /*}*/
-
-  /*.d1 {*/
-    /*background: #adadad;*/
-    /*color: white;*/
-    /*width: 50px;*/
-    /*!*text-align: center;*!*/
-    /*height: 298px;*/
-    /*padding-top: 80px;*/
-    /*font-size: 28px;*/
-    /*font-weight: bold;*/
-    /*margin-top: 40px;*/
-  /*}*/
-
+  ol{
+    text-align: center;
+  }
+  .flex-control-nav li {
+    display: inline-block;
+  }
+.flex-control-nav a {
+  width: 9px;
+  height: 9px;
+  margin: 0 3px;
+  overflow: hidden;
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  background-color: #ccc;
+  border-radius: 100%;
+  cursor: pointer;
+}
 </style>
 

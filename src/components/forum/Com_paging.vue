@@ -1,38 +1,12 @@
 <template>
   <!--分页-->
     <div>
-        <ul>
-          <li>
-            <a href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">...</a></li>
-          <li><a href="#">{{num}}</a></li>
-          <li>
-            <a href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
+      <el-pagination
+        background
+        layout="prev, pager, next"
+        :total="1000">
+      </el-pagination>
     </div>
-<!--<div>-->
-  <!--<div class="block">-->
-    <!--<el-pagination-->
-      <!--background-->
-      <!--@size-change="handleSizeChange"-->
-      <!--@current-change="handleCurrentChange"-->
-      <!--:current-page.sync="Page"-->
-      <!--:pager-count="5"-->
-      <!--:page-size="1"-->
-      <!--layout="prev, pager, next"-->
-      <!--:total="num">-->
-    <!--</el-pagination>-->
-  <!--</div>-->
-<!--</div>-->
 </template>
 
 <script>

@@ -7,8 +7,9 @@ import AdoDetails from '../components/adoption/AdoptDetails.vue'
 import UserDetails from '../components/user/UserDetails.vue'
 
 import Homeless from '../components/homeless/Homeless.vue'
+
 import Communication from '../components/forum/Communication.vue'
-import Notice from '../components/forum/Notice.vue'
+import Lists from '../components/forum/Lists.vue'
 import Details from '../components/forum/Details.vue'
 
 import Matchmaking from '../components/matchmaking/Matchmaking.vue'
@@ -53,13 +54,13 @@ export default new Router({
       ]
     },
     {
-      path: '/forum/notice',
-      name: 'Notice',
-      component: Notice,
+      path: '/forum/newests',
+      name: 'Lists',
+      component: Lists,
     },
     {
-      path: '/forum/recommend/1',
-      name: 'details',
+      path: '/forum/newest/details',
+      name: 'Details',
       component: Details,
     },
     {
