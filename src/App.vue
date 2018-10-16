@@ -18,6 +18,7 @@
 <script>
   import  foot from './components/foot.vue'
   import Header from './components/Header.vue'
+
 export default {
   name: 'App',
   components:{
