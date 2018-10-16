@@ -110,7 +110,6 @@ export default new Router({
         {path:'/share',component:Share}
       ]
 
-
     },
     {
       path: '/user/:userId',
