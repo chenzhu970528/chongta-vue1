@@ -1,5 +1,5 @@
 <template>
-  <div class="right col-xs-10" >
+  <div class="right" >
 
   </div>
 </template>

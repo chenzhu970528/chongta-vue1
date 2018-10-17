@@ -1,65 +1,45 @@
 <template>
   <div class="left">
-    <!--<div class="listbg"></div>-->
-    <!--<el-tabs :tab-position="tabPosition">-->
-      <!--<el-tab-pane label="个人资料">-->
-        <!--<personal></personal>-->
-      <!--</el-tab-pane>-->
-      <!--<el-tab-pane label="我的发布">-->
-        <!--<my-publish></my-publish>-->
-      <!--</el-tab-pane>-->
-      <!--<el-tab-pane label="我的帖子">-->
-        <!--<forum></forum>-->
-      <!--</el-tab-pane>-->
-      <!--<el-tab-pane label="消息中心">-->
-        <!--<message></message>-->
-      <!--</el-tab-pane>-->
-    <!--</el-tabs>-->
-    <!--<el-row>-->
-      <!--<el-col :span="10">-->
-        <!--<el-row class="tac">-->
-          <!--<el-col :span="5">-->
-            <el-menu
-              default-active="2"
-              text-color="#686868"
-              background-color="rgba(255,255,255,0.5)"
-              class="el-menu-vertical-demo"
-              @open="handleOpen"
-              @close="handleClose">
-              <el-submenu index="1">
-                <template slot="title">
-                  <span><router-link active-class="active"  role="presentation" to="/user/45/personal" exact><a
-                    href="">个人资料</a></router-link></span>
-                </template>
-                <el-menu-item-group>
-                  <el-menu-item index="1-1">编辑个人资料</el-menu-item>
-                  <el-menu-item index="1-2">修改密码</el-menu-item>
-                </el-menu-item-group>
-              </el-submenu>
-              <el-submenu index="2">
-                <span slot="title">我的发布</span>
-                <el-menu-item-group>
-                  <el-menu-item index="2-1">我的领养</el-menu-item>
-                  <el-menu-item index="2-2">我的寻宠启示</el-menu-item>
-                  <el-menu-item index="2-1">我的招领启事</el-menu-item>
-                  <el-menu-item index="2-2">我的相亲角</el-menu-item>
-                </el-menu-item-group>
-              </el-submenu>
-              <el-submenu index="3">
-                <span slot="title">我的帖子</span>
-              </el-submenu>
-              <el-submenu index="4">
-                <span slot="title">消息中心</span>
-                <el-menu-item-group>
-                  <el-menu-item index="4-1">系统消息</el-menu-item>
-                  <el-menu-item index="4-2">我的申请</el-menu-item>
-                  <el-menu-item index="4-1">申请我的</el-menu-item>
-                  <el-menu-item index="4-2">我的评论</el-menu-item>
-                  <el-menu-item index="4-2">评论我的</el-menu-item>
-                </el-menu-item-group>
-              </el-submenu>
-            </el-menu>
-
+    <el-menu
+      default-active="2"
+      text-color="#686868"
+      background-color="rgba(255,255,255,0.5)"
+      class="el-menu-vertical-demo"
+      @open="handleOpen"
+      @close="handleClose">
+      <el-submenu index="1">
+        <template slot="title">
+          <span>账号管理</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="1-1"><router-link tag="li" active-class="active"  role="presentation" to="/user/15/personal">个人资料</router-link></el-menu-item>
+          <el-menu-item index="1-2"><router-link tag="li" active-class="active"  role="presentation" to="/user/15/update">编辑个人资料</router-link></el-menu-item>
+          <el-menu-item index="1-3"><router-link tag="li" active-class="active"  role="presentation" to="/user/15/changepwd">修改密码</router-link></el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-submenu index="2">
+        <span slot="title">我的发布</span>
+        <el-menu-item-group>
+          <el-menu-item index="2-1"><router-link tag="li" active-class="active"  role="presentation" to="/user/15/myado">领养</router-link></el-menu-item>
+          <el-menu-item index="2-2"><router-link tag="li" active-class="active"  role="presentation" to="/user/15/mylost">寻宠启示</router-link></el-menu-item>
+          <el-menu-item index="2-3"><router-link tag="li" active-class="active"  role="presentation" to="/user/15/myhomls">流浪小宠</router-link></el-menu-item>
+          <el-menu-item index="2-4"><router-link tag="li" active-class="active"  role="presentation" to="/user/15/mymatch">相亲角</router-link></el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-submenu index="3">
+        <span slot="title">我的帖子</span>
+      </el-submenu>
+      <el-submenu index="4">
+        <span slot="title">消息中心</span>
+        <el-menu-item-group>
+          <el-menu-item index="4-1"><router-link tag="li" active-class="active"  role="presentation" to="/user/15/sys">系统消息</router-link></el-menu-item>
+          <el-menu-item index="4-2"><router-link tag="li" active-class="active"  role="presentation" to="/user/15/myaply">我的申请</router-link></el-menu-item>
+          <el-menu-item index="4-3"><router-link tag="li" active-class="active"  role="presentation" to="/user/15/aplyme">申请我的</router-link></el-menu-item>
+          <el-menu-item index="4-4"><router-link tag="li" active-class="active"  role="presentation" to="/user/15/mycom">我的评论</router-link></el-menu-item>
+          <el-menu-item index="4-5"><router-link tag="li" active-class="active"  role="presentation" to="/user/15/comme">评论我的</router-link></el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+    </el-menu>
   </div>
 </template>
 

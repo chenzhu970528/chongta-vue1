@@ -44,6 +44,7 @@
 <style scoped>
   *{
     padding: 0;
+    font-family: \5FAE\8F6F\96C5\9ED1;
   }
   .container{
     /*background:rgba(255,255,255,0.9);*/

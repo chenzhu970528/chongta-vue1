@@ -19,6 +19,18 @@ import forum from '../components/user/forum.vue'
 import message from '../components/user/message.vue'
 import mypublish from '../components/user/mypublish.vue'
 
+import update from '../components/user/update.vue'
+import aplyme from '../components/user/aplyme.vue'
+import changepwd from '../components/user/changepwd.vue'
+import comme from '../components/user/comme.vue'
+import myado from '../components/user/myado.vue'
+import myaply from '../components/user/myaply.vue'
+import mycom from '../components/user/mycom.vue'
+import mylost from '../components/user/mylost.vue'
+import mymatch from '../components/user/mymatch.vue'
+import sys from '../components/user/sys.vue'
+import myhomls from '../components/user/myhomls.vue'
+
 import Homeless from '../components/homeless/Homeless.vue'
 import publish from '../components/homeless/publish.vue'
 
@@ -124,6 +136,18 @@ export default new Router({
         {path:'forum',component:forum},
         {path:'message',component:message},
         {path:'mypublish',component:mypublish},
+
+        {path:'aplyme',component:aplyme},
+        {path:'update',component:update},
+        {path:'mycom',component:mycom},
+        {path:'changepwd',component:changepwd},
+        {path:'comme',component:comme},
+        {path:'myado',component:myado},
+        {path:'myaply',component:myaply},
+        {path:'mymatch',component:mymatch},
+        {path:'mylost',component:mylost},
+        {path:'sys',component:sys},
+        {path:'myhomls',component:myhomls},
       ]
     },
     {

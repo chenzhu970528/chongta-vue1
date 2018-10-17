@@ -45,11 +45,13 @@
     /*display: inline-block;*/
     width: 110px;
     height: 110px;
-    margin-left: 37%;
+    /*margin-left: 35%;*/
     border-radius: 110px;
     background-color: rgba(255, 255, 255, 0.4);
     position: relative;
     top:10px;
+    margin: 0px auto;
+    /*left: 50%;*/
   }
   .cir{
     position: absolute;
