@@ -15,13 +15,13 @@
         <span>公告：
           <required></required>|意见发聩 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <el-badge :value="12" class="item">
-          <el-button size="small" style="margin-top: -15px">全部消息</el-button>
+          <el-button size="small" style="margin-top: -15px;margin-left: 75px">全部消息</el-button>
       </el-badge>
         </span>
       </div>
     </div>
     <hot></hot>
-    <reward></reward>
+    <!--<reward></reward>-->
   </div>
 </template>
 
@@ -31,7 +31,7 @@
   import looking from './looking'
   import looked from './looked'
   import hot from './hot'
-  import reward from './reward'
+  // import reward from './reward'
 
     export default {
       components: {
@@ -40,7 +40,7 @@
         'looking': looking,
         'looked':looked,
         'hot':hot,
-        'reward':reward
+        // 'reward':reward
       },
       data() {
         return {

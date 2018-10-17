@@ -82,6 +82,7 @@
 .left img{
   height: 300px;
   width: 250px;
+  cursor: pointer;
 }
   /*.comment{*/
     /*width: 50px;*/

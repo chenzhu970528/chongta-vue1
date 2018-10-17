@@ -1,5 +1,5 @@
 <template>
-  <!--交流-->
+  <!--日记-->
   <div>
     <com_a></com_a>
   </div>
@@ -7,12 +7,12 @@
 
 <script>
   import Com_a from './Com_a.vue'
-  export default {
-    name: "Share" ,
-    components:{
-      'com_a':Com_a,
+    export default {
+        name: "Diary",
+      components:{
+        'com_a':Com_a,
+      }
     }
-  }
 </script>
 
 <style scoped>

@@ -1,7 +1,7 @@
 <template>
   <div class="list-group col-xs-4" >
   <div class="block">
-    <span class="demonstration">有报酬的启示</span>
+    <span class="demonstration" style="font-size: 20px">奖赏</span>
     <el-carousel height="150px">
       <el-carousel-item v-for="item in 4" :key="item">
         <h3>{{ item }}</h3>
@@ -20,7 +20,7 @@
 <style scoped>
   .el-carousel__item h3 {
     color: #475669;
-    font-size: 14px;
+    font-size: 20px;
     opacity: 0.75;
     line-height: 150px;
     margin: 0;

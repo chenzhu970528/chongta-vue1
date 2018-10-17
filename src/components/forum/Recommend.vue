@@ -1,44 +1,124 @@
 <template>
-  <div class="row">
-    <div class="d1 col-sm-2">精品推荐</div>
-    <div class="col-sm-10 col-sm-offset-1">
-     <com_a class="d"></com_a>
-     <com_a class="d"></com_a>
-     <com_a class="d"></com_a>
+  <div>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <ul class="ul">
+            <li class="li" v-for="val in values">
+              <router-link tag="a" active-class="active" role="presentation" to="/forum/details">
+                <img class=img :src=val.img>
+                <p class="p"><span class="left0">荐</span><a class="a title">{{val.title}}</a></p>
+              </router-link>
+            </li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <ul class="ul">
+            <li class="li" v-for="val in values">
+              <router-link tag="a" active-class="active" role="presentation" to="/forum/details">
+                <img class=img :src=val.img>
+                <p class="p"><span class="left0">荐</span><a class="a title">{{val.title}}</a></p>
+              </router-link>
+            </li>
+          </ul>
+        </div>
+        <div class="item">
+          <ul class="ul">
+            <li class="li" v-for="val in values">
+              <router-link tag="a" active-class="active" role="presentation" to="/forum/details">
+                <img class=img :src=val.img>
+                <p class="p"><span class="left0">荐</span><a class="a title">{{val.title}}</a></p>
+              </router-link>
+            </li>
+          </ul>
+        </div>
+        &nbsp
+      </div>
+      <!-- Controls -->
+      <a class=" carousel-control" data-slide="prev">
+      </a>
+      <a class=" carousel-control" data-slide="next">
+      </a>
+
     </div>
-    <com_paging class="col-sm-7 col-sm-offset-4">翻页</com_paging>
   </div>
 </template>
 
 <script>
-  import Com_a from './Com_a.vue'
-  import Com_paging from './Com_paging.vue'
-
   export default {
-        name: "Recommend",
-      components:{
-        'com_a':Com_a,
-        'com_paging': Com_paging,
+    name: "Recommend",
+    data() {
+      return {
+        values: [
+          {img: require("../../assets/images/a.jpg"), title: '标题'},
+          {img: require("../../assets/images/a.jpg"), title: '标题'},
+          {img: require("../../assets/images/a.jpg"), title: '标题'},
+
+        ]
       }
-    }
+    },
+  }
 </script>
 
 <style scoped>
-  .row{
-    margin-top: 40px;
+
+  .ul {
+    margin-left: -15px;
+  }
+
+  .li {
+    display: inline-block;
+    color: white;
+    position: relative;
+    list-style: none;
+    width: 380px;
     margin-bottom: 40px;
+    margin-right: 25px;
   }
-  .d1{
-    background: #adadad;
-    color:white;
-    width: 50px;
-    /*text-align: center;*/
-    height: 298px;
-    padding-top:80px;
-    font-size:28px;
+
+  .img {
+    width: 380px;
+    height: 285px;
+  }
+
+  .p {
+    background: #000000;
+    opacity: 0.4;
+    position: absolute;
+    bottom: -10px;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+
+  }
+
+  .left0 {
+    position: absolute;
+    left: 0px;
+    color: #f1a234;
     font-weight: bold;
-    margin-top: 40px;
+    line-height: 40px;
   }
 
-</style>
+  .a {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    text-decoration: none;
+  }
 
+  .title {
+    font-size: 17px;
+    color: white;
+  }
+</style>
