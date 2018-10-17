@@ -37,10 +37,19 @@ import publish from '../components/homeless/publish.vue'
 import detail from '../components/homeless/detail.vue'
 import wantadopt from '../components/homeless/wantadopt'
 import people from '../components/homeless/people'
+
 import Communication from '../components/forum/Communication.vue'
 import Page from '../components/forum/Page.vue'
 import Share from '../components/forum/Share.vue'
 
+import Lists from '../components/forum/Lists.vue'
+import Details from '../components/forum/Details.vue'
+import Newest from '../components/forum/Newest.vue'
+
+import Matchmaking from '../components/matchmaking/Matchmaking.vue'
+
+// import Matchmaking from '../components/matchmaking/Matchmaking.vue'
+import User from '../components/user/User.vue'
 Vue.use(Router)
 
 
@@ -56,7 +65,7 @@ export default new Router({
     {
       path: '/adoption',
       name: 'Adoption',
-      component: Adoption
+      component: Adoption,
     },
     {
       path: '/adoption/details/:adoId',
@@ -87,13 +96,24 @@ export default new Router({
 
     //流浪精灵模块
     {
+      path: '/adoption/details/:adoId',
+      name:'AdoDetails',
+      component: AdoDetails,
+    },
+    {
+      path: '/adoption/issue/:userId',
+      name:'AdoIssue',
+      component: AdoIssue,
+    },
+    {
+      path: '/userDetails/:userId',
+      name:'UserDetails',
+      component: UserDetails,
+    },
+    {
       path: '/homeless',
       name: 'Homeless',
       component: Homeless,
-      // children:[{ path: '',
-      //   name: 'publish',
-      //   component: publish,
-      // }]
     },
     {
       path: '/homeless/publish',
@@ -101,6 +121,20 @@ export default new Router({
       component: publish,
     },
     // 论坛
+
+    {path: '/forum',
+      name: 'Communication',
+      component: Communication,
+    },
+
+    {path: '/forum/lists',
+      name: 'Lists',
+      component: Lists,
+    },
+    {path: '/forum/details',
+      name: 'Details',
+      component: Details,
+    },
     {
       path: '/homeless/wantadopt',
       name: 'wantadopt',
@@ -115,16 +149,6 @@ export default new Router({
       path: '/homeless/people',
       name: 'people',
       component: people,
-    },
-    {
-      path: '/forum',
-      name: 'Communication',
-      component: Communication,
-      children:[
-        {path:'/diary',component:Share},
-        {path:'/share',component:Share}
-      ]
-
     },
     // 个人中心
     {
