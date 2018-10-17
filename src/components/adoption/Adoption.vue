@@ -42,14 +42,14 @@
         <!--小喵-->
         <div class="title">
           <img src="../../assets/adoption/take.png" width="50" alt="">
-          <span class="text-info">萌宠分类</span>
+          <span class="text-primary">萌宠分类</span>
         </div>
         <div class="row">
           <div class="col-sm-8" >
             <ado-sizer></ado-sizer>
             <div class="title">
               <img src="../../assets/adoption/iconHome.png" width="50" alt="">
-              <span class="text-info">领养信息</span>
+              <span class="text-primary">领养信息</span>
             </div>
               <ado-list></ado-list>
           </div>

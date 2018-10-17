@@ -4,9 +4,11 @@
     <h3>发布婚介</h3>
     <form class="form-horizontal">
       <div class="form-group">
-        <label for="inputkind" class="col-sm-3 control-label">品种：</label>
-        <div class="col-sm-3">
-          <input type="text" class="form-control" id="inputkind" placeholder="猫">
+        <label class="col-sm-3 control-label">宠物类别：</label>
+        <div class="col-sm-6">
+          <el-radio v-model="radio2" label="1">猫</el-radio>
+          <el-radio v-model="radio2" label="2">狗</el-radio>
+          <el-radio v-model="radio2" label="3">其他</el-radio>
         </div>
       </div>
       <div class="form-group">
@@ -129,6 +131,7 @@
         return {
           radio: '1',
           radio1: '1',
+          radio2:'1',
           pickerOptions1: {
             disabledDate(time) {
               return time.getTime() > Date.now();

@@ -1,8 +1,9 @@
 <template>
     <div>
-      <router-link tag="div" to="/adoption/details/7"><a>
+
       <el-row>
         <el-col :span="7" v-for="(o, index) in 6" :key="o" :offset="index > 0 ? 3 : 0">
+          <router-link tag="div" to="/adoption/details/7"><a>
           <el-card :body-style="{ padding: '0px' }">
             <img src="../../assets/homeless/u=1177403016,309772193&fm=26&gp=0.jpg" class="image">
             <div style="padding: 14px;">
@@ -12,9 +13,10 @@
               </div>
             </div>
           </el-card>
+          </a></router-link>
         </el-col>
       </el-row>
-      </a></router-link>
+
       <button style="margin: 20px auto" type="button" class="btn btn-default btn-lg btn-block">加载更多</button>
     </div>
 </template>
