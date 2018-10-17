@@ -52,7 +52,7 @@
           name: '小肥猪',
           headPic: require("../../assets/images/a.jpg"),
           val: '不知道泥萌有没有看英国BBC电视台的“宠物岛”（Pet island）系列纪录片的第四集。里面有一位英国绅士就是将自家的英国古代牧羊犬梳落的毛发收集起来，屯了六年，足足一大包，然后请当地专门提供狗宠物毛发编制服务的裁缝阿姨，先将狗狗的毛发用专门将纤维卷成线的机器，把狗狗的毛发卷成毛线，然后用这些狗狗毛发造成的毛线来编织成大件毛衣！ ',
-          imgs: [require("../../assets/mao1.jpg"), require("../../assets/images/a.jpg")],
+          imgs: [require("../../assets/match/mao1.jpg"), require("../../assets/images/a.jpg")],
           time: '2018/10/16 18:35',
           num1: 23,
           num2: 44,

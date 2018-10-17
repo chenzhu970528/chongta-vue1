@@ -39,18 +39,16 @@ import wantadopt from '../components/homeless/wantadopt'
 import people from '../components/homeless/people'
 
 import Communication from '../components/forum/Communication.vue'
-import Page from '../components/forum/Page.vue'
-import Share from '../components/forum/Share.vue'
+// import Page from '../components/forum/Page.vue'
+// import Share from '../components/forum/Share.vue'
 
 import Lists from '../components/forum/Lists.vue'
 import Details from '../components/forum/Details.vue'
-import Newest from '../components/forum/Newest.vue'
+// import Newest from '../components/forum/Newest.vue'
 
-import Matchmaking from '../components/matchmaking/Matchmaking.vue'
 
 // import Matchmaking from '../components/matchmaking/Matchmaking.vue'
-import User from '../components/user/User.vue'
-Vue.use(Router)
+Vue.use(Router);
 
 
 export default new Router({

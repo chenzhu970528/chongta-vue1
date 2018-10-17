@@ -64,7 +64,7 @@
           {
           name: '少时诵诗书所',
           time:'2018/10/17 10:09',
-          head: require('../../assets/mao1.jpg'),
+          head: require('../../assets/match/mao1.jpg'),
           val:'说得很好！！！当迷失于都市却有着不凡身世的霸道总攻喵当迷失于都市却有着不凡身世的霸道总攻喵'
         }
         ],
@@ -79,7 +79,7 @@
             name1: '滴滴滴',
             name2: '功能',
             time:'2018/10/17 10:08',
-            head: require('../../assets/mao1.jpg'),
+            head: require('../../assets/match/mao1.jpg'),
             val:'世的霸道总攻喵，遇到家发生怎样的化学反应？'
           },{
             name1: '的非官方',
