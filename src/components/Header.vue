@@ -18,7 +18,7 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <!--登录-->
+        <li><router-link tag="li" active-class="active" role="presentation" to="/register"><a>登录</a></router-link></li>
         <li v-if="!isLogin">
           <user-login></user-login>
         </li>
@@ -27,8 +27,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
              aria-expanded="false">{{UserName}}<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <router-link tag="li" active-class="active" role="presentation" :to="'/user/'+UserId+'/personal'"><a>个人中心</a>
-            </router-link>
+            <router-link tag="li" active-class="active" role="presentation" :to="'/user/'+UserId+'/personal'"><a>个人中心</a></router-link>
             <li role="separator" class="divider"></li>
             <li><a href="/">退出登录</a></li>
           </ul>
