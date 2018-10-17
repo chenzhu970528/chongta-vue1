@@ -21,10 +21,10 @@ import people from '../components/homeless/people'
 import Communication from '../components/forum/Communication.vue'
 import Lists from '../components/forum/Lists.vue'
 import Details from '../components/forum/Details.vue'
+import Newest from '../components/forum/Newest.vue'
 
 import Matchmaking from '../components/matchmaking/Matchmaking.vue'
-import Page from '../components/forum/Page.vue'
-import Share from '../components/forum/Share.vue'
+
 // import Matchmaking from '../components/matchmaking/Matchmaking.vue'
 import User from '../components/user/User.vue'
 Vue.use(Router)
@@ -45,6 +45,16 @@ export default new Router({
       component: Adoption,
     },
     {
+      path : '/matchmaking',
+      name : 'matchmain',
+      component : matchmain,
+    },
+    {
+      path:'/matchmaking/matchDel',
+      name:'matchDel',
+      component : matchDel,
+    },
+    {
       path:'/matchmaking/mpublish',
       name:'mpublish',
       component:mpublish
@@ -53,6 +63,11 @@ export default new Router({
       path: '/adoption/details/:adoId',
       name:'AdoDetails',
       component: AdoDetails,
+    },
+    {
+      path: '/adoption/issue/:userId',
+      name:'AdoIssue',
+      component: AdoIssue,
     },
     {
       path: '/userDetails/:userId',
@@ -69,16 +84,19 @@ export default new Router({
       name: 'publish',
       component: publish,
     },
-    {
-      path: '/forum',
+
+    {path: '/forum',
       name: 'Communication',
       component: Communication,
-      children:[
-        {path:'/diary',component:Share},
-        {path:'/share',component:Share}
-      ]
+    },
 
-
+    {path: '/forum/lists',
+      name: 'Lists',
+      component: Lists,
+    },
+    {path: '/forum/details',
+      name: 'Details',
+      component: Details,
     },
     {
       path: '/homeless/wantadopt',
@@ -95,17 +113,6 @@ export default new Router({
       name: 'people',
       component: people,
     },
-    {
-      path: '/forum',
-      name: 'Communication',
-      component: Communication,
-      children:[
-        {path:'/diary',component:Share},
-        {path:'/share',component:Share}
-      ]
-
-    },
-
     {
       path: '/user/:userId',
       name: 'User',

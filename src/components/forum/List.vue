@@ -2,26 +2,37 @@
   <div>
     <div class="con">
       <ul>
-        <li v-for="(value,index) in values">
-          <div class="left" >
-            <router-link tag="h3" active-class="active"  role="presentation" to="/forum/newest/details">  <h3 class="title"><a>{{value.title}}</a></h3></router-link>
-            <p class="name"><span class="glyphicon glyphicon-user"></span>{{value.name}}</p>
-            <p class="val">{{value.val}}</p>
-            <p class="foot"><span>{{value.time}}</span><span>&nbsp{{value.num}}回复</span></p>
+        <li v-for="value in values">
+          <div class="head" >
+            <router-link tag="h1" active-class="active"  role="presentation" to="/forum/details">  <h1 class="title"><a>{{value.title}}</a></h1></router-link>
+            <p class="name">
+              <span>{{value.name}}</span>
+              <span>{{value.time}}</span>
+              <span>❤ 88</span>
+              <span>&nbsp{{value.num}}回复</span>
+            </p>
           </div>
           <div class="photo">
-            <router-link tag="a" active-class="active"  role="presentation" to="/forum/newest/details"><img :src='value.src' alt="图片"></router-link>
-
+            <router-link tag="a" active-class="active"  role="presentation" to="/forum/details"><img :src='value.src' alt="图片"></router-link>
             <a></a>
           </div>
+
+          <div class="value">
+            <p class="val">{{value.val}}</p>
+            <router-link tag="a" active-class="active"  role="presentation" to="/forum/details">
+              <button type="button" class="btn btn-default">阅读全文</button>
+            </router-link>
+
+          </div>
+
         </li>
-  <div class="page">
-    <el-pagination
-      background
-      layout="prev, pager, next"
-      :total="1000">
-    </el-pagination>
-  </div>
+        <div class="page">
+          <el-pagination
+            background
+            layout="prev, pager, next"
+            :total="1000">
+          </el-pagination>
+        </div>
       </ul>
     </div>
   </div>
@@ -103,7 +114,7 @@
             time: '2018/10/16/13:04',
             num: 67
             ,
-           src: require("../../assets/images/a.jpg")
+            src: require("../../assets/images/a.jpg")
           },
           {
             title: '这是第一个标题',
@@ -125,12 +136,15 @@
 </script>
 
 <style scoped>
+  button{
+    border-radius:3px;
+  }
   .con {
     margin: 25px;
     width: 800px;
     height: 1650px;
     padding: 0px 20px 20px 20px;
-    border: 1px solid #989898;
+    /*border: 1px solid #989898;*/
   }
 
   ul {
@@ -139,23 +153,20 @@
   }
 
   li {
-    width: 758px;
-    height: 180px;
+    width: 768px;
     list-style: none;
-    /*background: white;*/
-    border-bottom: 1px dashed #969696;
+    padding: 35px;
+    background: #ffffff;
+    margin-bottom: 35px;
+    overflow: hidden;
   }
 
   .val {
-    width: 600px;
-    height: 55px;
-    font-size: 16px;
+    font-size: 20px;
   }
 
-  .left {
-    width: 600px;
-    height: 150px;
-    float: left;
+  .head {
+    text-align: center;
   }
 
   .name {
@@ -163,22 +174,16 @@
     font-size: 13px;
   }
 
-  .foot {
-    color: #989898;
-    font-size: 13px;
-  }
-
   .photo {
-    margin-top:15px;
-    width: 150px;
-    height: 150px;
-    float: right;
-    /*margin-right:15px;*/
+    margin-top:30px;
+    text-align: center;
   }
 
   img {
-    width: 150px;
-    height: 150px;
+    max-width: 698px;
+  }
+  .value{
+    margin: 30px 0;
   }
   .page{
     margin-top:70px;
@@ -187,11 +192,10 @@
     line-height: 150px;
     text-align:center;
   }
-a{
-  text-decoration: none;
-  color: #323232;
-}
-  a:hover{
-    color: #80c5d9;
+  a{
+    text-decoration: none;
+    color: #323232;
   }
+
+
 </style>

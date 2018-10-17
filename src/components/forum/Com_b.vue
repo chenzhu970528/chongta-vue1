@@ -1,11 +1,11 @@
 <template>
-   <div> <!--发帖-->
-  <div id="editorElem" style="text-align:left"></div>
-  <button v-on:click="getContent">发表</button>
-  </div>
+   <!--<div> &lt;!&ndash;发帖&ndash;&gt;-->
+  <!--<div id="editorElem" style="text-align:left"></div>-->
+  <!--<button v-on:click="getContent">发表</button>-->
+  <!--</div>-->
 </template>
 <script>
-  import E from 'wangeditor'
+  // import E from 'wangeditor'
   export default {
     name:  "Com_b",
     data () {

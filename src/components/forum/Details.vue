@@ -67,9 +67,9 @@
     box-shadow: -2px 2px 10px 2px #bcbcbc;
     background: rgba(255, 255, 255, 0.9);
     width: 1240px;
-    height: 2000px;
     margin: auto;
     position: relative;
+    padding-bottom:300px;
   }
 h2{
   height: 50px;
@@ -78,7 +78,8 @@ h2{
   .left {
     display: inline-block;
     width: 800px;
-    height: 1700px;
+    /*height: 1700px;*/
+
     border:1px solid #989898;
     margin:25px 0 0 25px;
     padding:22px;

@@ -1,109 +1,124 @@
 <template>
   <div>
-    <ul>
-      <li v-for="val in values">
-        <img :src=val.img>
-        <p ><span class="left" >荐</span><a class="title">{{val.title}}</a></p>
-      </li>
-    </ul>
-    <ol class="flex-control-nav flex-control-paging">
-      <li><a class="flex-active">1</a></li>
-      <li><a class="">2</a></li>
-      <li><a class="">3</a></li></ol>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <ul class="ul">
+            <li class="li" v-for="val in values">
+              <router-link tag="a" active-class="active" role="presentation" to="/forum/details">
+                <img class=img :src=val.img>
+                <p class="p"><span class="left0">荐</span><a class="a title">{{val.title}}</a></p>
+              </router-link>
+            </li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <ul class="ul">
+            <li class="li" v-for="val in values">
+              <router-link tag="a" active-class="active" role="presentation" to="/forum/details">
+                <img class=img :src=val.img>
+                <p class="p"><span class="left0">荐</span><a class="a title">{{val.title}}</a></p>
+              </router-link>
+            </li>
+          </ul>
+        </div>
+        <div class="item">
+          <ul class="ul">
+            <li class="li" v-for="val in values">
+              <router-link tag="a" active-class="active" role="presentation" to="/forum/details">
+                <img class=img :src=val.img>
+                <p class="p"><span class="left0">荐</span><a class="a title">{{val.title}}</a></p>
+              </router-link>
+            </li>
+          </ul>
+        </div>
+        &nbsp
+      </div>
+      <!-- Controls -->
+      <a class=" carousel-control" data-slide="prev">
+      </a>
+      <a class=" carousel-control" data-slide="next">
+      </a>
+
+    </div>
   </div>
 </template>
 
 <script>
-  import Com_a from './Com_a.vue'
-  import Com_paging from './Com_paging.vue'
-
   export default {
     name: "Recommend",
     data() {
       return {
         values: [
-          {img: require("../../assets/images/a.jpg"),title: '标题'},
-          {img: require("../../assets/images/a.jpg"),title: '标题'},
-          {img: require("../../assets/images/a.jpg"),title: '标题'},
+          {img: require("../../assets/images/a.jpg"), title: '标题'},
+          {img: require("../../assets/images/a.jpg"), title: '标题'},
+          {img: require("../../assets/images/a.jpg"), title: '标题'},
 
         ]
       }
     },
-
-
-        methods: {
-          d(index) {
-            return 'id' + index;
-          }
-        },
-        components: {
-          'com_a': Com_a,
-          'com_paging': Com_paging,
-        }
   }
 </script>
 
 <style scoped>
-ul{
-  margin-left:-15px;
-}
-  ul>li {
-    display: inline-block;
-    color:white;
-    position:relative;
-    list-style: none;
-    width: 380px;
-    margin-bottom:40px ;
-    margin-right:25px ;
+
+  .ul {
+    margin-left: -15px;
   }
 
-  img {
+  .li {
+    display: inline-block;
+    color: white;
+    position: relative;
+    list-style: none;
+    width: 380px;
+    margin-bottom: 40px;
+    margin-right: 25px;
+  }
+
+  .img {
     width: 380px;
     height: 285px;
   }
-  p{
+
+  .p {
     background: #000000;
-    opacity: 0.3;
-    position:absolute;
-    bottom:-10px;
+    opacity: 0.4;
+    position: absolute;
+    bottom: -10px;
     height: 40px;
     width: 100%;
-    text-align:center;
+    text-align: center;
+
   }
-.left{
-  position:absolute;
-  left:0px;
-  color: #c4cc26;
-  font-weight:bold;
-  line-height: 40px;
-}
-  a {
-    text-align:center;
+
+  .left0 {
+    position: absolute;
+    left: 0px;
+    color: #f1a234;
+    font-weight: bold;
+    line-height: 40px;
+  }
+
+  .a {
+    text-align: center;
     height: 40px;
     line-height: 40px;
     width: 100%;
     text-decoration: none;
   }
-  .title:hover{
-    color: #68abbd;
-  }
-  ol{
-    text-align: center;
-  }
-  .flex-control-nav li {
-    display: inline-block;
-  }
-.flex-control-nav a {
-  width: 9px;
-  height: 9px;
-  margin: 0 3px;
-  overflow: hidden;
-  display: block;
-  text-indent: 100%;
-  white-space: nowrap;
-  background-color: #ccc;
-  border-radius: 100%;
-  cursor: pointer;
-}
-</style>
 
+  .title {
+    font-size: 17px;
+    color: white;
+  }
+</style>

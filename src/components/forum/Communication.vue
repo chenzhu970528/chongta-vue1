@@ -1,14 +1,13 @@
 <template>
   <div>
+
     <div id="content">
       <p>你的位置：宠它 > 宠宠交流</p>
-
-      <com_d></com_d>
       <div>
         <recommend>精品推荐</recommend>
 
       </div>
-      <hr>
+      <com_d></com_d>
       <div>
         <div class="left">
           <div class="row body">
@@ -38,6 +37,7 @@
   import Like from './Like'
   import Share from './Share'
   import Diary from './Diary'
+
 
   export default {
     name: "Communication",
